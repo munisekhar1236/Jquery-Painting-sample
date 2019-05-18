@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<title>Paint</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" ></script>
+<script type="text/javascript" src="draw.js"></script>
+	<style type="text/css">
+			body{
+			 width: 100%;
+				height: 100%;
+				overflow:hidden;
+			}
+
+			#container{
+				background-image: url("bg.jpg");
+				background-color: #ffffff;
+			}
+			
+			#container > canvas{
+			  border: 1px solid #696969;
+			}
+			
+		
+	</style>
+</head>
+<body>
+	
+  <input type="button" id="draw" value="Draw" title="Draw"/>			
+  <input type="color" id="selectColor" value="#FF000" onchange="setcolor(this.value);" />
+  <input type="button" id="loadCanvas" value="Load"/>
+  <input type="button" id="undo" value="<-" title="undo"/>
+  <input type="button" id="redo" value="->" title="redo"/>
+  <input type="button" id="export" value="Export" title="export"/>
+  <input type="button" id="clear" value="Clear" title="clear"/>
+
+  <input type="button" id="erase" value="Erase" title="Erase"/>
+	
+	<div id="container">
+
+	<canvas id="paintCanvas">
+
+	</canvas>
+
+	</div>
+
+</html>
